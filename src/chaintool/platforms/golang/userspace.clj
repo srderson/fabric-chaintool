@@ -277,7 +277,6 @@
         (go-cmd {:path path
                  :env {"GOBIN" (.getCanonicalPath gobin)}}
                 "build" "-o" (.getCanonicalPath output)
-                "-ldflags" "-linkmode external -extldflags '-static'"
                 "chaincode"))
 
       (println "Compilation complete")))
